@@ -26,17 +26,21 @@
           <li><a href="<%= pages_about_path %>">About</a></li>
           <li><%= link_to "Location", pages_location_path %></li>
         </ul>
-      </div>
+      </div>  
     </nav>
-
+    
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">Javascript</a></li>
-      <li><a href="mobile.html">Mobile</a></li>
+      <li><a href="#">Courses</a></li>
+      <li><a href="<%= pages_about_path %>">About</a></li>
+      <li><%= link_to "Location", pages_location_path %></li>
     </ul>
+
+    <div class="row">
+      <div class="col m10 offset-m1">
+        <%= yield %>
+      </div>
+    </div>
   
-    <%= yield %>
     <script>
       $(document).ready(function(){
         $('.sidenav').sidenav();
